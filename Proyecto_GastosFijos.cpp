@@ -6,6 +6,8 @@ int main() {
 	
 	string Saludo;
 	
+
+    
 	cout<<"Escribi un saludo "<<endl;
 	cin>>Saludo;
 	
