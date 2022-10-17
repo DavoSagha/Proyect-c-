@@ -6,7 +6,6 @@ struct Producto {
 	float precio;
 	string nombreProducto;
 	string categoria;
-	//struct Fecha;
 	string stock;
 };
 
