@@ -7,6 +7,7 @@ struct Producto {
 	string nombreProducto;
 	string categoria;
 	struct Fecha;
+	char stock[500+1];
 };
 
 struct Fecha {
@@ -15,31 +16,39 @@ struct Fecha {
 	int anio;
 };
 
+
+
 int main() {
 	float Precio;
 	string nombreProducto;
-	int Dia;
+	string categoria;
+	int dia, mes, anio;
+
+
 	cout << "Ingrese precio del producto" << endl;
 	cin >> Precio;
-	cout << "Ingrese precio del producto" << endl;
+	cout << "Ingrese nombre del producto" << endl;
 	cin >> nombreProducto;
+	cout << "Ingrese día, mes y año (en ese orden) del producto" << endl;
+	cin >> dia;
+	cin >> mes;
+	cin >> anio;
+	cout << "Ingrese categoría del producto" << endl;
+	cin >> categoria;
+
+
+
+
 	Producto info;
-	Fecha fechaDeCompra;
 	info.precio = Precio;
 	info.nombreProducto = nombreProducto;
-	fechaDeCompra.dia = Dia;
-	string Saludo;
-	int booli = false;
-	
-if (!booli)
-{
-	cout<< "Bool falso"<< endl;
-}
+	info.categoria = categoria;
 
-    
-	cout<<"Escribi un saludo "<<endl;
-	cin>>Saludo;
+	Fecha fechaDeCompra;
+	fechaDeCompra.dia = dia;
+	fechaDeCompra.mes = mes;
+	fechaDeCompra.anio = anio;
+  
 	
-	cout<<Saludo;
 	return 0;
 }
