@@ -20,7 +20,14 @@ Fecha fecha (int dia, int mes, int anio){
 	cout << dia << " | " << mes << " | " << anio;
 }
 
-void producto(float precio, string nombreProducto, string categoria, char stock[500+1], Fecha fecha) {
+void producto() {
+	float precio;
+	string nombreProducto;
+	string categoria;
+	char stock[500+1];
+	int dia, mes, anio;
+
+
 	cout << "Ingrese precio del producto" << endl;
 	cin >> precio;
 	cout << "Ingrese nombre del producto" << endl;
@@ -29,37 +36,16 @@ void producto(float precio, string nombreProducto, string categoria, char stock[
 	cin >> categoria;
 	cout << "Ingrese Numero del producto" << endl;
 	cin >> stock;
-}
-
-int main() {
-	float Precio;
-	string nombreProducto;
-	string categoria;
-	int dia, mes, anio;
-	string Stock;
-
-	fecha(10, 12, 2022);
-	cout << "Ingrese precio del producto" << endl;
-	cin >> Precio;
-	cout << "Ingrese nombre del producto" << endl;
-	cin >> nombreProducto;
-	cout << "Ingrese día, mes y año (en ese orden) del producto" << endl;
+	cout << "Ingrese la fecha de registro del producto"<< endl;
 	cin >> dia;
 	cin >> mes;
 	cin >> anio;
-	cout << "Ingrese categoría del producto" << endl;
-	cin >> categoria;
-	cout << "Ingrese Numero del producto" << endl;
-	cin >> Stock;
+	fecha(dia, mes, anio);
+}
 
-
-
-
-	Producto info;
-	info.precio = Precio;
-	info.nombreProducto = nombreProducto;
-	info.categoria = categoria;
-	info.stock = Stock;
+int main() {
+	
+	producto();
 
 	/*Fecha fechaDeCompra;
 	fechaDeCompra.dia = dia;
