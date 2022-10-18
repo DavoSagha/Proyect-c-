@@ -46,8 +46,6 @@ void producto() {
 }
 
 int main() {
-
 	producto();
-
 	return 0;
 }
